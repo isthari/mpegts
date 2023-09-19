@@ -6,4 +6,4 @@ bars.ts
 output.ts
 bars_dmx/*
 !bars_dmx/readme.txt
-
+/build/

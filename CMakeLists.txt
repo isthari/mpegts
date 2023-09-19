@@ -22,6 +22,7 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR}/unit_tests/)
 
 file(GLOB libfiles ${CMAKE_CURRENT_SOURCE_DIR}/mpegts/*.cpp)
 add_library(mpegts STATIC ${libfiles})
+add_library(mpegts_shared SHARED ${libfiles})
 
 add_executable(mpeg_ts_dmx_tests ${CMAKE_CURRENT_SOURCE_DIR}/main_dmx.cpp)
 target_link_libraries(mpeg_ts_dmx_tests mpegts Threads::Threads)
