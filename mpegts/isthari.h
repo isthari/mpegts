@@ -9,6 +9,7 @@ extern "C" {
 typedef void (*tsOutCallback) (uint8_t* data, int size);
 
 MpegTsMuxer * createMuxer(tsOutCallback callback);
+void addAudioFrame(MpegTsMuxer* pointer, const uint8_t* bytes, int size, uint64_t timestamp);
 void addVideoFrame(MpegTsMuxer* pointer, const uint8_t* bytes, int size, uint64_t timestamp);
 
 #ifdef __cplusplus

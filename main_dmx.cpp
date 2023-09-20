@@ -18,7 +18,7 @@ int vFrameCounter = {1};
 void dmxOutput(EsFrame *pEs) {
 
         if (pEs->mStreamType == TYPE_AUDIO) {
-            std::cout << " AAC Frame, PID: " << unsigned(pEs->mPid) << " PTS:" << unsigned(pEs->mPts) << std::endl;
+            std::cout << " AAC Frame, PID: " << unsigned(pEs->mPid) << " PTS:" << unsigned(pEs->mPts) << " DTS:" << unsigned(pEs->mDts)<< std::endl;
             size_t lDataPointer = 0;
 
             //Break out the individual ADTS frames
